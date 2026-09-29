@@ -9,9 +9,9 @@
     <!-- Menggunakan Font Awesome untuk ikon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Pengaturan background hero image */
+        /* Pengaturan background hero image mengambil dari file di GitHub */
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bg.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background-sekolah.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -23,7 +23,7 @@
     <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <!-- Pastikan file logo UPTD SD NEGERI 2 JAYA ASRI.jpg ada di folder yang sama di GitHub -->
+                <!-- Pastikan file logo UPTD SD NEGERI 2 JAYA ASRI.png ada di folder yang sama di GitHub -->
                 <img src="UPTD SD NEGERI 2 JAYA ASRI.png" alt="Logo UPTD SD Negeri 2 Jaya Asri" class="w-12 h-12 object-contain rounded-full shadow-sm">
                 <div>
                     <h1 class="font-bold text-lg text-blue-900 leading-tight">UPTD SD NEGERI 2 JAYA ASRI</h1>
@@ -44,7 +44,7 @@
         <p class="text-lg md:text-xl text-gray-200 drop-shadow-md">Pusat Informasi dan Akses Dokumen Digital Sekolah</p>
     </header>
 
-    <!-- Container Pengumuman (Dinamis dari Google Sheets) -->
+    <!-- Container Pengumuman -->
     <div id="pengumuman-container" class="container mx-auto px-4 -mt-8 relative z-10 mb-8 max-w-5xl">
         <!-- Konten akan dimuat oleh JavaScript -->
     </div>
@@ -53,12 +53,11 @@
     <main class="container mx-auto px-4 py-8 max-w-5xl">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             
-            <!-- Kolom Kiri: Profil Sekolah -->
+            <!-- Profil Sekolah -->
             <section id="profil">
                 <h3 class="text-2xl font-bold text-center mb-8 uppercase">Profil Sekolah</h3>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Card Visi -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition">
                         <div class="flex items-center gap-3 mb-4">
                             <i class="fas fa-star text-3xl text-blue-500"></i>
@@ -69,7 +68,6 @@
                         </p>
                     </div>
 
-                    <!-- Card Misi -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition">
                         <div class="flex items-center gap-3 mb-4">
                             <i class="fas fa-handshake text-3xl text-blue-500"></i>
@@ -84,26 +82,22 @@
                 </div>
             </section>
 
-            <!-- Kolom Kanan: Tombol Google Drive -->
+            <!-- Tombol Google Drive -->
             <section id="dokumen" class="bg-blue-50 p-6 md:p-8 rounded-2xl shadow-inner border border-blue-100">
                 <h3 class="text-xl font-bold text-center mb-8 uppercase text-gray-800">Pusat Data & Akses Dokumen<br>(Google Drive)</h3>
                 
-                <!-- Manajemen & KS -->
                 <div class="mb-8 bg-white p-6 rounded-xl shadow-sm">
                     <h4 class="text-center font-bold text-gray-700 mb-4">MANAJEMEN & KEPALA SEKOLAH</h4>
-                    <!-- GANTI # DENGAN LINK FOLDER KS -->
                     <a href="#" target="_blank" class="block w-full bg-blue-700 hover:bg-blue-800 text-white text-center font-bold py-4 px-6 rounded-lg shadow-md transition transform hover:-translate-y-1">
                         <i class="fas fa-folder-open mr-2"></i> FOLDER KEPALA SEKOLAH (KS)
                     </a>
                     <p class="text-xs text-center text-gray-500 mt-3">RKT, RKAS, Dokumen Supervisi Akademik, PK, dll.</p>
                 </div>
 
-                <!-- Perangkat Guru -->
                 <div class="bg-white p-6 rounded-xl shadow-sm">
                     <h4 class="text-center font-bold text-gray-700 mb-6">PERANGKAT & DOKUMEN GURU (KELAS 1 - 6)</h4>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- GANTI # DENGAN LINK FOLDER MASING-MASING KELAS -->
                         <a href="https://drive.google.com/drive/folders/1fwH6ilH4ebU67rAyRBQb_u9XxokCwjMO?usp=sharing" target="_blank" class="bg-green-700 hover:bg-green-800 text-white text-center font-bold py-3 px-4 rounded-lg shadow transition flex items-center justify-center gap-2">
                             <i class="fas fa-folder"></i> KELAS 1
                         </a>
@@ -125,7 +119,6 @@
                     </div>
                 </div>
             </section>
-
         </div>
     </main>
 
@@ -133,7 +126,6 @@
     <section class="bg-gray-100 py-12 mt-8">
         <div class="container mx-auto px-4 max-w-5xl">
             
-            <!-- Header Berita & Tombol Buat Post -->
             <div class="flex justify-between items-center mb-8 border-b-2 border-blue-900 pb-2">
                 <h3 class="text-2xl font-bold">Berita & Informasi Terbaru</h3>
                 <button onclick="toggleForm()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded shadow">
@@ -141,7 +133,7 @@
                 </button>
             </div>
 
-            <!-- Form Buat Postingan (Awalnya Disembunyikan) -->
+            <!-- Form Buat Postingan -->
             <div id="form-post-section" class="bg-white p-6 rounded-xl shadow-md border border-blue-100 mb-8 hidden">
                 <h4 class="font-bold text-lg mb-4 text-gray-700 border-b pb-2">Tulis Berita Baru</h4>
                 <form id="formTambahBerita" onsubmit="kirimPostingan(event)">
@@ -159,11 +151,15 @@
                         <label class="block text-sm font-medium text-gray-700 mb-1">Isi Berita</label>
                         <textarea id="inputKonten" required rows="4" class="w-full border border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                     </div>
+                    
+                    <!-- INPUT ID FOTO -->
                     <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Link URL Foto (Opsional)</label>
-                        <input type="url" id="inputUrlFoto" placeholder="https://..." class="w-full border border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
+                        <label class="block text-sm font-bold text-gray-700 mb-1">ID Foto Google Drive (Opsional)</label>
+                        <p class="text-xs text-gray-500 mb-2">Contoh: Jika link foto adalah https://drive.google.com/file/d/<strong>1A2b3C4d...</strong>/view, cukup masukkan bagian ID-nya saja: <strong>1A2b3C4d...</strong></p>
+                        <input type="text" id="inputIdFoto" placeholder="Masukkan ID Foto" class="w-full border border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
                     </div>
-                    <div class="flex justify-end gap-2">
+                    
+                    <div class="flex justify-end gap-2 mt-4">
                         <button type="button" onclick="toggleForm()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Batal</button>
                         <button type="submit" id="btnSubmitPost" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded flex items-center">
                             <span>Kirim Berita</span>
@@ -172,8 +168,8 @@
                 </form>
             </div>
 
+            <!-- Daftar Berita -->
             <div id="post-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Konten berita akan dimuat oleh JavaScript -->
                 <p class="text-gray-500 text-center col-span-2 animate-pulse">Memuat data informasi dari server...</p>
             </div>
         </div>
@@ -184,31 +180,20 @@
         <div class="container mx-auto px-4 max-w-5xl flex flex-col md:flex-row justify-between items-center gap-6">
             <h3 class="font-bold text-lg uppercase text-gray-700">Kontak Informasi</h3>
             <div class="flex flex-col md:flex-row gap-6 text-sm text-gray-600">
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-envelope text-blue-600 text-xl"></i>
-                    <span>sdn2jayaasri@sekolah.id</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-phone text-blue-600 text-xl"></i>
-                    <span>(0725) XXXXXX</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
-                    <span>Metro Kibang, Lampung Timur</span>
-                </div>
+                <div class="flex items-center gap-2"><i class="fas fa-envelope text-blue-600 text-xl"></i><span>sdn2jayaasri@sekolah.id</span></div>
+                <div class="flex items-center gap-2"><i class="fas fa-phone text-blue-600 text-xl"></i><span>(0725) XXXXXX</span></div>
+                <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-blue-600 text-xl"></i><span>Metro Kibang, Lampung Timur</span></div>
             </div>
         </div>
-        <div class="text-center text-xs text-gray-400 mt-8">
-            &copy; 2026 UPTD SD Negeri 2 Jaya Asri. All rights reserved.
-        </div>
+        <div class="text-center text-xs text-gray-400 mt-8">&copy; 2026 UPTD SD Negeri 2 Jaya Asri. All rights reserved.</div>
     </footer>
 
-    <!-- SCRIPT CMS GOOGLE SHEETS & LOGIKA FORMULIR -->
+    <!-- SCRIPT UTAMA -->
     <script>
-        // PENTING: Ganti URL di bawah ini dengan URL Web App dari Google Apps Script Anda (yang sudah di-Deploy ulang dengan fungsi doPost)
+        // PENTING: Pastikan SCRIPT_URL ini mengarah ke URL Web App dari Google Apps Script terbaru Anda
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwUOOaKzPhnNAAO0d8WYXt6VLJC6YAnWh5b6-8sVYcQWzmLAVQjw9Pbhm4-gcliaXbe9A/exec';
 
-        // Fungsi mengubah format tanggal ke bahasa Indonesia
+        // Fungsi memformat tanggal
         function formatTanggal(tanggalString) {
             try {
                 const dateObj = new Date(tanggalString);
@@ -222,7 +207,7 @@
             }
         }
 
-        // Fungsi untuk mengambil data dari Google Sheets (doGet)
+        // Fungsi mengambil data dari Google Sheets (doGet)
         async function loadCMSData() {
             try {
                 const response = await fetch(SCRIPT_URL);
@@ -242,9 +227,7 @@
                         if(pengumumanHTML === '') {
                             pengumumanHTML = `
                                 <div class="bg-yellow-50 border-l-4 border-yellow-500 p-5 md:p-6 rounded-lg shadow-lg flex flex-col sm:flex-row gap-4">
-                                    <div class="bg-yellow-200 p-3 rounded-full flex-shrink-0 h-min">
-                                        <i class="fas fa-bullhorn text-yellow-700 text-2xl"></i>
-                                    </div>
+                                    <div class="bg-yellow-200 p-3 rounded-full flex-shrink-0 h-min"><i class="fas fa-bullhorn text-yellow-700 text-2xl"></i></div>
                                     <div class="flex-1">
                                         <h3 class="font-bold text-yellow-900 text-lg mb-1">Pengumuman Kepala Sekolah</h3>
                                         <p class="text-sm md:text-base text-yellow-800 leading-relaxed">${item.Konten}</p>
@@ -256,7 +239,7 @@
                     } else if(tipeItem === 'post') {
                         let imageHTML = '';
                         if(item.URL_Foto && item.URL_Foto.trim() !== '') {
-                            imageHTML = `<img src="${item.URL_Foto}" alt="Foto Berita" class="w-full h-56 object-cover rounded-t-xl">`;
+                            imageHTML = `<img src="${item.URL_Foto}" alt="Foto Berita" class="w-full h-56 object-cover rounded-t-xl bg-gray-200">`;
                         }
 
                         postHTML += `
@@ -268,9 +251,7 @@
                                         <span class="text-xs text-gray-500"><i class="far fa-calendar-alt"></i> ${tanggalRapi}</span>
                                     </div>
                                     <p class="text-gray-700 leading-relaxed flex-1 text-sm md:text-base">${item.Konten}</p>
-                                    <p class="text-xs text-gray-500 mt-4 font-medium border-t border-gray-100 pt-3">
-                                        <i class="fas fa-user-edit mr-1"></i> Ditulis oleh: ${item.Penulis}
-                                    </p>
+                                    <p class="text-xs text-gray-500 mt-4 font-medium border-t border-gray-100 pt-3"><i class="fas fa-user-edit mr-1"></i> Ditulis oleh: ${item.Penulis}</p>
                                 </div>
                             </div>
                         `;
@@ -278,21 +259,21 @@
                 });
 
                 pengumumanContainer.innerHTML = pengumumanHTML;
-                postContainer.innerHTML = postHTML || '<p class="text-gray-500 col-span-2 text-center">Belum ada berita terbaru.</p>';
+                postContainer.innerHTML = postHTML || '<p class="text-gray-500 col-span-2 text-center py-8">Belum ada berita terbaru.</p>';
 
             } catch (error) {
                 console.error('Gagal memuat data CMS:', error);
-                document.getElementById('post-container').innerHTML = '<p class="text-red-500 text-center col-span-2">Gagal memuat data informasi dari server. Pastikan URL Apps Script sudah benar.</p>';
+                document.getElementById('post-container').innerHTML = '<p class="text-red-500 text-center col-span-2 py-8">Gagal memuat data informasi dari server. Pastikan URL Apps Script sudah benar.</p>';
             }
         }
 
-        // Fungsi untuk menampilkan/menyembunyikan form
+        // Fungsi menyembunyikan/menampilkan formulir
         function toggleForm() {
             const formSection = document.getElementById('form-post-section');
             formSection.classList.toggle('hidden');
         }
 
-        // Fungsi untuk mengirim data ke Google Sheets (doPost)
+        // Fungsi mengirim data form ke Apps Script (doPost)
         async function kirimPostingan(event) {
             event.preventDefault(); 
             
@@ -302,40 +283,63 @@
             const penulis = document.getElementById('inputPenulis').value;
             const pin = document.getElementById('inputPin').value;
             const konten = document.getElementById('inputKonten').value;
-            const urlFoto = document.getElementById('inputUrlFoto').value;
+            
+            // Proses mengubah ID menjadi URL Gambar anti-blokir
+            let inputFto = document.getElementById('inputIdFoto').value.trim();
+            let urlFotoFinal = "";
+            
+            if (inputFto !== "") {
+                // Ekstrak ID jika tidak sengaja memasukkan link utuh
+                if (inputFto.includes('drive.google.com/file/d/')) {
+                    const match = inputFto.match(/\/d\/(.+?)\//);
+                    if (match && match[1]) {
+                        inputFto = match[1];
+                    }
+                }
+                // Format aman Google Drive
+                urlFotoFinal = "https://lh3.googleusercontent.com/d/" + inputFto;
+            }
 
             btnSubmit.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Mengirim...';
             btnSubmit.disabled = true;
 
+            const payload = JSON.stringify({
+                penulis: penulis,
+                pin: pin,
+                konten: konten,
+                url_foto: urlFotoFinal // Mengirim URL final ke Apps Script
+            });
+
             try {
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'text/plain;charset=utf-8', 
-                    },
-                    body: JSON.stringify({
-                        penulis: penulis,
-                        pin: pin,
-                        konten: konten,
-                        url_foto: urlFoto
-                    })
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    redirect: 'follow',
+                    body: payload
                 });
 
-                const result = await response.json();
-
-                if (result.status === "success") {
-                    alert(result.message);
-                    document.getElementById('formTambahBerita').reset(); 
-                    toggleForm(); 
-                    
-                    // Memuat ulang data berita
-                    document.getElementById('post-container').innerHTML = '<p class="text-gray-500 text-center col-span-2 animate-pulse">Memuat berita baru...</p>';
-                    loadCMSData(); 
-                } else {
-                    alert("Gagal: " + result.message);
+                const resultText = await response.text();
+                
+                try {
+                    const result = JSON.parse(resultText);
+                    if (result.status === "success") {
+                        alert(result.message);
+                        document.getElementById('formTambahBerita').reset(); 
+                        toggleForm(); 
+                        document.getElementById('post-container').innerHTML = '<p class="text-gray-500 text-center col-span-2 animate-pulse py-8">Memuat berita baru...</p>';
+                        loadCMSData(); 
+                    } else {
+                        alert("Gagal: " + result.message);
+                    }
+                } catch (e) {
+                     console.error("Response bukan JSON:", resultText);
+                     alert("Data terkirim, namun server telat merespon. Berita akan muncul setelah halaman dimuat ulang.");
+                     document.getElementById('formTambahBerita').reset(); 
+                     toggleForm();
                 }
+
             } catch (error) {
-                alert("Terjadi kesalahan jaringan saat mengirim data. Pastikan Google Apps Script sudah di-deploy dengan versi baru.");
+                alert("Terjadi kesalahan jaringan.");
                 console.error(error);
             } finally {
                 btnSubmit.innerHTML = teksAsli;
@@ -343,7 +347,7 @@
             }
         }
 
-        // Jalankan fungsi setelah halaman selesai dimuat
+        // Panggil fungsi saat web dibuka
         window.onload = loadCMSData;
     </script>
 </body>
