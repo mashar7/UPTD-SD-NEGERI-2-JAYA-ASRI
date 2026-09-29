@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microsite - UPTD SD Negeri 2 Jaya Asri</title>
-    <!-- Menggunakan Tailwind CSS untuk styling cepat dan responsif -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Menggunakan Font Awesome untuk ikon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Pengaturan background hero image mengambil dari file di GitHub */
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bg.jpg');
             background-size: cover;
@@ -23,7 +20,6 @@
     <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <!-- Pastikan file logo UPTD SD NEGERI 2 JAYA ASRI.png ada di folder yang sama di GitHub -->
                 <img src="UPTD SD NEGERI 2 JAYA ASRI.png" alt="Logo UPTD SD Negeri 2 Jaya Asri" class="w-12 h-12 object-contain rounded-full shadow-sm">
                 <div>
                     <h1 class="font-bold text-lg text-blue-900 leading-tight">UPTD SD NEGERI 2 JAYA ASRI</h1>
@@ -45,40 +41,50 @@
     </header>
 
     <!-- Container Pengumuman -->
-    <div id="pengumuman-container" class="container mx-auto px-4 -mt-8 relative z-10 mb-8 max-w-5xl">
-        <!-- Konten akan dimuat oleh JavaScript -->
-    </div>
+    <div id="pengumuman-container" class="container mx-auto px-4 -mt-8 relative z-10 mb-8 max-w-5xl"></div>
 
-    <!-- Main Content Grid (Profil & Akses Drive) -->
+    <!-- Main Content Grid -->
     <main class="container mx-auto px-4 py-8 max-w-5xl">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             
-            <!-- Profil Sekolah -->
-            <section id="profil">
-                <h3 class="text-2xl font-bold text-center mb-8 uppercase">Profil Sekolah</h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i class="fas fa-star text-3xl text-blue-500"></i>
-                            <h4 class="text-xl font-bold">VISI</h4>
+            <!-- Profil Sekolah & Agenda -->
+            <section id="profil" class="flex flex-col gap-6">
+                <div>
+                    <h3 class="text-2xl font-bold text-center mb-8 uppercase">Profil Sekolah</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Visi -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-star text-3xl text-blue-500"></i>
+                                <h4 class="text-xl font-bold">VISI</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Mewujudkan peserta didik yang unggul dalam prestasi, berkarakter mulia, dan peduli lingkungan berlandaskan Profil Pelajar Pancasila.</p>
                         </div>
-                        <p class="text-sm text-gray-600">
-                            Mewujudkan peserta didik yang unggul dalam prestasi, berkarakter mulia, dan peduli lingkungan berlandaskan Profil Pelajar Pancasila.
-                        </p>
+                        <!-- Misi -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-handshake text-3xl text-blue-500"></i>
+                                <h4 class="text-xl font-bold">MISI</h4>
+                            </div>
+                            <ul class="text-sm text-gray-600 space-y-2 list-disc pl-4">
+                                <li>Menyelenggarakan pembelajaran yang aktif, inovatif, dan menyenangkan (PAIKEM).</li>
+                                <li>Menumbuhkan nilai-nilai karakter luhur.</li>
+                                <li>Menciptakan lingkungan sekolah yang bersih, sehat, dan asri.</li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500 hover:shadow-md transition">
-                        <div class="flex items-center gap-3 mb-4">
-                            <i class="fas fa-handshake text-3xl text-blue-500"></i>
-                            <h4 class="text-xl font-bold">MISI</h4>
-                        </div>
-                        <ul class="text-sm text-gray-600 space-y-2 list-disc pl-4">
-                            <li>Menyelenggarakan pembelajaran yang aktif, inovatif, dan menyenangkan (PAIKEM).</li>
-                            <li>Menumbuhkan nilai-nilai karakter luhur.</li>
-                            <li>Menciptakan lingkungan sekolah yang bersih, sehat, dan asri.</li>
-                        </ul>
+                <!-- FITUR BARU: Kotak Agenda -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-orange-500 hover:shadow-md transition mt-2">
+                    <div class="flex items-center gap-3 mb-4 border-b border-gray-100 pb-3">
+                        <i class="fas fa-calendar-alt text-2xl text-orange-500"></i>
+                        <h4 class="text-xl font-bold text-gray-800 uppercase">Agenda Sekolah</h4>
                     </div>
+                    <ul id="agenda-container" class="space-y-3 text-sm text-gray-600">
+                        <!-- Agenda akan dimuat di sini oleh JavaScript -->
+                        <li class="text-gray-400 italic animate-pulse">Memuat data agenda...</li>
+                    </ul>
                 </div>
             </section>
 
@@ -96,7 +102,6 @@
 
                 <div class="bg-white p-6 rounded-xl shadow-sm">
                     <h4 class="text-center font-bold text-gray-700 mb-6">PERANGKAT & DOKUMEN GURU (KELAS 1 - 6)</h4>
-                    
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <a href="https://drive.google.com/drive/folders/1fwH6ilH4ebU67rAyRBQb_u9XxokCwjMO?usp=sharing" target="_blank" class="bg-green-700 hover:bg-green-800 text-white text-center font-bold py-3 px-4 rounded-lg shadow transition flex items-center justify-center gap-2">
                             <i class="fas fa-folder"></i> KELAS 1
@@ -151,14 +156,11 @@
                         <label class="block text-sm font-medium text-gray-700 mb-1">Isi Berita</label>
                         <textarea id="inputKonten" required rows="4" class="w-full border border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                     </div>
-                    
-                    <!-- INPUT ID FOTO -->
                     <div class="mb-4">
                         <label class="block text-sm font-bold text-gray-700 mb-1">ID Foto Google Drive (Opsional)</label>
                         <p class="text-xs text-gray-500 mb-2">Contoh: Jika link foto adalah https://drive.google.com/file/d/<strong>1A2b3C4d...</strong>/view, cukup masukkan bagian ID-nya saja: <strong>1A2b3C4d...</strong></p>
                         <input type="text" id="inputIdFoto" placeholder="Masukkan ID Foto" class="w-full border border-gray-300 rounded p-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
                     </div>
-                    
                     <div class="flex justify-end gap-2 mt-4">
                         <button type="button" onclick="toggleForm()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Batal</button>
                         <button type="submit" id="btnSubmitPost" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded flex items-center">
@@ -193,7 +195,6 @@
         // PENTING: Pastikan SCRIPT_URL ini mengarah ke URL Web App dari Google Apps Script terbaru Anda
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwUOOaKzPhnNAAO0d8WYXt6VLJC6YAnWh5b6-8sVYcQWzmLAVQjw9Pbhm4-gcliaXbe9A/exec';
 
-        // Fungsi memformat tanggal
         function formatTanggal(tanggalString) {
             try {
                 const dateObj = new Date(tanggalString);
@@ -207,7 +208,6 @@
             }
         }
 
-        // Fungsi mengambil data dari Google Sheets (doGet)
         async function loadCMSData() {
             try {
                 const response = await fetch(SCRIPT_URL);
@@ -215,14 +215,17 @@
 
                 const pengumumanContainer = document.getElementById('pengumuman-container');
                 const postContainer = document.getElementById('post-container');
+                const agendaContainer = document.getElementById('agenda-container');
                 
                 let pengumumanHTML = '';
                 let postHTML = '';
+                let agendaHTML = '';
 
                 data.forEach(item => {
                     const tanggalRapi = formatTanggal(item.Tanggal);
                     const tipeItem = (item.Tipe) ? item.Tipe.trim().toLowerCase() : '';
 
+                    // 1. Tampilkan Pengumuman
                     if(tipeItem === 'pengumuman') {
                         if(pengumumanHTML === '') {
                             pengumumanHTML = `
@@ -236,6 +239,7 @@
                                 </div>
                             `;
                         }
+                    // 2. Tampilkan Post/Berita
                     } else if(tipeItem === 'post') {
                         let imageHTML = '';
                         if(item.URL_Foto && item.URL_Foto.trim() !== '') {
@@ -256,24 +260,36 @@
                             </div>
                         `;
                     }
+
+                    // 3. Tampilkan Data Kolom Agenda
+                    // Jika sel di kolom F (Header: "Agenda") ada isinya, maka tampilkan
+                    if(item.Agenda && item.Agenda.trim() !== '') {
+                        agendaHTML += `
+                            <li class="flex items-start gap-3 border-b border-gray-100 pb-2 last:border-0 last:pb-0">
+                                <i class="fas fa-calendar-check text-orange-500 mt-1 flex-shrink-0"></i>
+                                <span class="leading-relaxed text-gray-700">${item.Agenda}</span>
+                            </li>
+                        `;
+                    }
                 });
 
+                // Memasukkan hasil render ke dalam HTML
                 pengumumanContainer.innerHTML = pengumumanHTML;
                 postContainer.innerHTML = postHTML || '<p class="text-gray-500 col-span-2 text-center py-8">Belum ada berita terbaru.</p>';
+                agendaContainer.innerHTML = agendaHTML || '<li class="text-gray-500 italic">Belum ada agenda terdekat.</li>';
 
             } catch (error) {
                 console.error('Gagal memuat data CMS:', error);
                 document.getElementById('post-container').innerHTML = '<p class="text-red-500 text-center col-span-2 py-8">Gagal memuat data informasi dari server. Pastikan URL Apps Script sudah benar.</p>';
+                document.getElementById('agenda-container').innerHTML = '<li class="text-red-500 text-sm">Gagal memuat agenda.</li>';
             }
         }
 
-        // Fungsi menyembunyikan/menampilkan formulir
         function toggleForm() {
             const formSection = document.getElementById('form-post-section');
             formSection.classList.toggle('hidden');
         }
 
-        // Fungsi mengirim data form ke Apps Script (doPost)
         async function kirimPostingan(event) {
             event.preventDefault(); 
             
@@ -284,19 +300,16 @@
             const pin = document.getElementById('inputPin').value;
             const konten = document.getElementById('inputKonten').value;
             
-            // Proses mengubah ID menjadi URL Gambar anti-blokir
             let inputFto = document.getElementById('inputIdFoto').value.trim();
             let urlFotoFinal = "";
             
             if (inputFto !== "") {
-                // Ekstrak ID jika tidak sengaja memasukkan link utuh
                 if (inputFto.includes('drive.google.com/file/d/')) {
                     const match = inputFto.match(/\/d\/(.+?)\//);
                     if (match && match[1]) {
                         inputFto = match[1];
                     }
                 }
-                // Format aman Google Drive
                 urlFotoFinal = "https://lh3.googleusercontent.com/d/" + inputFto;
             }
 
@@ -307,7 +320,7 @@
                 penulis: penulis,
                 pin: pin,
                 konten: konten,
-                url_foto: urlFotoFinal // Mengirim URL final ke Apps Script
+                url_foto: urlFotoFinal 
             });
 
             try {
@@ -347,7 +360,6 @@
             }
         }
 
-        // Panggil fungsi saat web dibuka
         window.onload = loadCMSData;
     </script>
 </body>
